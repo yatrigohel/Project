@@ -1,0 +1,83 @@
+
+<link rel="stylesheet" href="faqs1.css">
+
+<header>
+  <div class="logo">
+    <img src="c:\Users\Yatri\Downloads\logo.jpeg" alt="Gada Electronics Logo" />
+    <h1>Gada Electronics</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="proj.html">Home</a></li>
+      <li><a href="faqs1.html">FAQs</a></li>
+      <li><a href="chatbot.html">Help</a></li>
+      <li><a href="form.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="faqs">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>What types of electronics do you sell?</h3>
+      <span class="toggle">+</span>
+    </div>
+    <p class="faq-answer">We offer a wide range of electronics including TVs, mobile phones, refrigerators, washing machines, audio systems, and more!</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Do you offer home delivery?</h3>
+      <span class="toggle">+</span>
+    </div>
+    <p class="faq-answer">Yes, we provide free home delivery within Ahmedabad city limits for orders above ₹5,000.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>What payment methods do you accept?</h3>
+      <span class="toggle">+</span>
+    </div>
+    <p class="faq-answer">We accept cash, UPI, credit/debit cards, and EMI options via select banks.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Is there a warranty on the products?</h3>
+      <span class="toggle">+</span>
+    </div>
+    <p class="faq-answer">All products come with a manufacturer’s warranty. We also offer extended warranty plans on selected items.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Do you offer repair services?</h3>
+      <span class="toggle">+</span>
+    </div>
+    <p class="faq-answer">Yes, we have authorized service support and repair tie-ups for most brands. Visit our store or call us for details.</p>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      <h3>Can I return or exchange a product?</h3>
+      <span class="toggle">+</span>
+    </div>
+    <p class="faq-answer">Returns and exchanges are accepted within 7 days of purchase with a valid receipt, only for unopened and undamaged items.</p>
+  </div>
+</section>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-question');
+
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.nextElementSibling;
+      const icon = item.querySelector('.toggle');
+
+      answer.classList.toggle('show');
+      icon.textContent = answer.classList.contains('show') ? '-' : '+';
+    });
+  });
+</script>
